@@ -1,0 +1,3 @@
+name: ooosssososos-t1
+main: com.tenjava.entries.ooosssososos.t1.TenJava
+version: '${project.version}'
