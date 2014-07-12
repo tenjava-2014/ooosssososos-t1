@@ -1,0 +1,5 @@
+type: "potion"
+name: "FAST_DIGGING"
+amplifier: 3
+#seconds
+duration: 30

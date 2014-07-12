@@ -1,0 +1,5 @@
+type: "potion"
+name: "INCREASE_DAMAGE"
+amplifier: 3
+#seconds
+duration: 30

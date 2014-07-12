@@ -1,0 +1,5 @@
+type: "potion"
+name: "SPEED"
+amplifier: 3
+#seconds
+duration: 30
