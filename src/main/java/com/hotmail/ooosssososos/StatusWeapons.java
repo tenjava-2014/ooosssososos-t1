@@ -25,12 +25,6 @@ public class StatusWeapons extends JavaPlugin {
         pl = this;
 
         //loadData
-        copyFileFromJar("haste.jpg");
-        copyFileFromJar("haste.yml");
-        copyFileFromJar("speed.jpg");
-        copyFileFromJar("speed.yml");
-        copyFileFromJar("strength.jpg");
-        copyFileFromJar("strength.yml");
         saveDefaultConfig();
         settings = new Settings(getConfig());
 
@@ -74,40 +68,6 @@ public class StatusWeapons extends JavaPlugin {
         return pl;
     }
 
-    public void copyFileFromJar(String fileName) {
 
-        File file = new File(this.getDataFolder()+File.separator + "runes" + File.separator + fileName);
-        InputStream fis = this.getResource(fileName);
-        FileOutputStream fos = null;
-        try {
-            fos = new FileOutputStream(file);
-        } catch (FileNotFoundException e1) {
-            e1.printStackTrace();
-        }
-        try {
-            byte[] buf = new byte[1024];
-            int i = 0;
-            while ((i = fis.read(buf)) != -1) {
-                fos.write(buf, 0, i);
-            }
-        } catch (Exception e) { // Catching NPEs too
-            e.printStackTrace();
-        } finally {
-            if (fis != null) {
-                try {
-                    fis.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (fos != null) {
-                try {
-                    fos.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
 
 }
