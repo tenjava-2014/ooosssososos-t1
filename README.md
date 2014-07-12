@@ -24,12 +24,28 @@ Compilation
 Maven will download all required dependencies and build a ready-for-use plugin package!
 
 ---------------------------------------
+Installation
+
+Additional Files needed! (jpg's and yml's) (3 premade runes, more can be made by staff if desired)
+
+Please extract and place folder("runes") into <server directory>/plugins/statusweapons/
+
+dl: https://www.dropbox.com/s/uhgdf7qmg3f1cfs/runes.rar
+
+---------------------------------------
 
 Usage
 -----
 
 1. Install plugin
-2. Do things with it
+2. Craft a Rune
+3. place rune on a side of a block
+4. Draw a rune on the map
+5. Recieve status effect
+
+The 3 Premade runes recipes are available in "<server Directory>/plugins/statusweapons/runes" (assuming you downloaded and placed it there during installation like u were supposed to)
+
+
 
 <!-- Hi, ooosssososos! This is the default README for every ten.java submission. -->
 <!-- We encourage you to edit this README with some information about your submission – keep in mind you'll be scored on documentation! -->

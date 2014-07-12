@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class RecipeManager {
     public static ItemStack rune;
@@ -16,7 +17,9 @@ public class RecipeManager {
     //creates recipes
     public void initRecipes(){
         rune = new ItemStack(Material.ITEM_FRAME);
-        rune.getItemMeta().setDisplayName(ChatColor.RESET + "" + ChatColor.BLUE + "Rune");
+        ItemMeta meta = rune.getItemMeta();
+        meta.setDisplayName(ChatColor.RESET + "" + ChatColor.BLUE + "Rune");
+        rune.setItemMeta(meta);
         Bukkit.addRecipe(new ShapedRecipe(rune).shape("AAA","ABA","ACA").setIngredient('A',Material.DIAMOND).setIngredient('B', Material.PAPER).setIngredient('C', Material.REDSTONE));
     }
 

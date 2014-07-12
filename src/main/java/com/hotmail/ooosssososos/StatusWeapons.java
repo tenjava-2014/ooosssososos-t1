@@ -4,6 +4,7 @@ import com.hotmail.ooosssososos.IO.IDFileManager;
 import com.hotmail.ooosssososos.IO.RuneLoader;
 import com.hotmail.ooosssososos.Listener.PlayerInteractListener;
 import com.hotmail.ooosssososos.Listener.PlayerPVPListener;
+import com.hotmail.ooosssososos.Managers.RecipeManager;
 import com.hotmail.ooosssososos.Managers.RuneManager;
 import com.hotmail.ooosssososos.Managers.Settings;
 import com.hotmail.ooosssososos.Managers.StatManager;
@@ -35,6 +36,10 @@ public class StatusWeapons extends JavaPlugin {
         }catch(IOException e){
             e.printStackTrace();
         }
+
+        //Recipes
+
+        new RecipeManager();
 
 
         //register Events
