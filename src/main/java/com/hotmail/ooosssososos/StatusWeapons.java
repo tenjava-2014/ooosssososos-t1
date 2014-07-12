@@ -6,6 +6,7 @@ import com.hotmail.ooosssososos.Listener.PlayerPVPListener;
 import com.hotmail.ooosssososos.Managers.RuneManager;
 import com.hotmail.ooosssososos.Managers.Settings;
 import com.hotmail.ooosssososos.Managers.StatManager;
+import com.hotmail.ooosssososos.Tasks.RuneTask;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
@@ -36,6 +37,8 @@ public class StatusWeapons extends JavaPlugin {
         //register Events
         this.getServer().getPluginManager().registerEvents(new PlayerPVPListener(), this);
         this.getServer().getPluginManager().registerEvents(new PlayerInteractListener(), this);
+
+        new RuneTask().runTaskTimer(this, 20,10);
     }
 
     public void onDisable(){

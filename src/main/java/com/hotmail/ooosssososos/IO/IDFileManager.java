@@ -4,10 +4,8 @@ import com.hotmail.ooosssososos.Managers.RuneManager;
 import com.hotmail.ooosssososos.StatusWeapons;
 import org.bukkit.Bukkit;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.Map;
 import java.util.UUID;
 
 public class IDFileManager {
@@ -23,6 +21,14 @@ public class IDFileManager {
                 RuneManager.setID(UUID.fromString(d[0]),Short.parseShort(d[1]));
             }
         }
+    }
+
+    public void save() throws IOException {
+        BufferedWriter w = new BufferedWriter(new FileWriter(f));
+        for(Map.Entry<UUID, Short> s : RuneManager.getids().entrySet()){
+            w.write(s.getKey() + ":" + s.getValue());
+        }
+        w.close();
     }
 
 }

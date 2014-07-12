@@ -14,7 +14,7 @@ public class RuneRenderer extends MapRenderer{
 
     public RuneRenderer(){
         img.getGraphics().setColor(Color.WHITE);
-        img.getGraphics().drawRect(0,0,128,128);
+        img.getGraphics().fillRect(0,0,128,128);
     }
 
     boolean redrawNeeded = true;

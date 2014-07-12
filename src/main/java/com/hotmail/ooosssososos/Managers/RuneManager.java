@@ -22,6 +22,10 @@ public class RuneManager {
         runesActive.put(a,new FrameTimeEntry(b, System.currentTimeMillis()));
     }
 
+    public static HashMap<UUID, Short> getids(){
+        return IDs;
+    }
+
     public static void remEntry(String a){
         runesActive.remove(a);
     }
