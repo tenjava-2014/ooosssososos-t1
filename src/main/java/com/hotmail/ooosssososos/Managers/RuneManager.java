@@ -1,5 +1,7 @@
 package com.hotmail.ooosssososos.Managers;
 
+import com.hotmail.ooosssososos.Managers.Data.FrameTimeEntry;
+import com.hotmail.ooosssososos.Map.Renderer.RuneRenderer;
 import com.hotmail.ooosssososos.StatusWeapons;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -20,6 +22,10 @@ public class RuneManager {
 
     public static void addActive(UUID a,ItemFrame b){
         runesActive.put(a,new FrameTimeEntry(b, System.currentTimeMillis()));
+    }
+
+    public static FrameTimeEntry getRuneFrame(UUID c){
+        return runesActive.get(c);
     }
 
     public static HashMap<UUID, Short> getids(){
@@ -69,20 +75,18 @@ public class RuneManager {
 
     public static void finalize(Map.Entry<UUID, FrameTimeEntry> ent){
         if(ent.getValue().frame.getItem().getType() == Material.MAP){
-            MapView v = (MapView)ent.getValue().frame.getItem();
+            MapView v = Bukkit.getMap(ent.getValue().frame.getItem().getDurability());
+            //((RuneRenderer)v.getRenderers().get(0)).img
 
+
+            System.out.println("removing Rune");
+            RuneManager.runesActive.remove(ent.getKey());
+            ent.getValue().frame.remove();
         }else{
             System.out.println("Soemthing went wrong");
         }
     }
 
-    private static class FrameTimeEntry{
-        public ItemFrame frame;
-        public long time;
-        public FrameTimeEntry(ItemFrame f, long t){
-            time = t;
-            frame = f;
-        }
-    }
+
 
 }

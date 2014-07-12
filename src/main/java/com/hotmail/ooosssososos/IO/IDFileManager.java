@@ -19,6 +19,7 @@ public class IDFileManager {
             while(line != null){
                 String[] d = line.split(":");
                 RuneManager.setID(UUID.fromString(d[0]),Short.parseShort(d[1]));
+                line = r.readLine();
             }
         }
     }

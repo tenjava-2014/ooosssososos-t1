@@ -13,15 +13,18 @@ public class RuneRenderer extends MapRenderer{
     public BufferedImage img = new java.awt.image.BufferedImage(128,128, BufferedImage.TYPE_INT_RGB);
 
     public RuneRenderer(){
-        img.getGraphics().setColor(Color.WHITE);
-        img.getGraphics().fillRect(0,0,128,128);
+        Graphics g = img.getGraphics();
+        g.setColor(Color.white);
+        g.fillRect(0,0,128,128);
+        g.setColor(Color.black);
     }
 
-    boolean redrawNeeded = true;
+    public boolean redrawNeeded = true;
 
     @Override
     public void render(MapView mapView, MapCanvas mapCanvas, Player player) {
         if (redrawNeeded) {
+            System.out.println("redraw true");
             mapCanvas.drawImage(0,0,img);
             redrawNeeded = false;
             player.sendMap(mapView);

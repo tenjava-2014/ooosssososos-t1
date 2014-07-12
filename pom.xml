@@ -16,6 +16,11 @@
 			<id>bukkit-repo</id>
 			<url>http://repo.bukkit.org/content/groups/public</url>
 		</repository>
+        <repository>
+            <id>Sonatype-public</id>
+            <name>SnakeYAML repository</name>
+            <url>http://oss.sonatype.org/content/groups/public/</url>
+        </repository>
 	</repositories>
 
 	<dependencies>
@@ -25,6 +30,11 @@
 			<version>1.7.9-R0.2-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>LATEST</version>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -38,8 +48,8 @@
 				<configuration>
 					<!-- Per the rules at http://git.io/lAJgzQ, you're free to change
 					     "1.6" to "1.7" or "1.8" if you wish. This will not impact your score. -->
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 		</plugins>
