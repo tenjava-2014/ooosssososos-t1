@@ -8,7 +8,7 @@ public class PlayerPVPListener implements Listener {
 
     @EventHandler(ignoreCancelled = true)
     public void playerHitEvent(EntityDamageByEntityEvent eve){
-
+        //No Time
     }
 
 }

@@ -1,6 +1,7 @@
 package com.hotmail.ooosssososos;
 
 import com.hotmail.ooosssososos.IO.IDFileManager;
+import com.hotmail.ooosssososos.IO.RuneLoader;
 import com.hotmail.ooosssososos.Listener.PlayerInteractListener;
 import com.hotmail.ooosssososos.Listener.PlayerPVPListener;
 import com.hotmail.ooosssososos.Managers.RuneManager;
@@ -30,6 +31,7 @@ public class StatusWeapons extends JavaPlugin {
 
         try{
             IDFMan = new IDFileManager();
+            RuneLoader.loadRunes();
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -38,6 +40,7 @@ public class StatusWeapons extends JavaPlugin {
         //register Events
         this.getServer().getPluginManager().registerEvents(new PlayerPVPListener(), this);
         this.getServer().getPluginManager().registerEvents(new PlayerInteractListener(), this);
+
 
         new RuneTask().runTaskTimer(this, 20,10);
         new DrawTask().runTaskTimer(this, 20,1);

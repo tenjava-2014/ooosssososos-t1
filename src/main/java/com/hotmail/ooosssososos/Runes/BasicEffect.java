@@ -1,5 +1,7 @@
 package com.hotmail.ooosssososos.Runes;
 
+import org.bukkit.entity.Player;
+
 /**
  * Created with IntelliJ IDEA.
  * User: oscar
@@ -9,6 +11,6 @@ package com.hotmail.ooosssososos.Runes;
  */
 public interface BasicEffect {
 
-
+    public void execute(Player p);
 
 }

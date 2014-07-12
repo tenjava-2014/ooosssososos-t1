@@ -10,6 +10,7 @@ import java.util.UUID;
 
 public class IDFileManager {
 
+    //Loads map ids
     private static File f = new File(StatusWeapons.getInstance().getDataFolder().getAbsolutePath()+"/IDs.txt");
     public IDFileManager() throws IOException {
         if(!f.exists())f.createNewFile();
@@ -24,10 +25,11 @@ public class IDFileManager {
         }
     }
 
+    //saves map ids
     public void save() throws IOException {
         BufferedWriter w = new BufferedWriter(new FileWriter(f));
         for(Map.Entry<UUID, Short> s : RuneManager.getids().entrySet()){
-            w.write(s.getKey() + ":" + s.getValue());
+            w.write(s.getKey().toString() + ":" + s.getValue());
         }
         w.close();
     }

@@ -8,6 +8,7 @@ public class Action {
     public int y;
     public long time;
 
+    //Drawing action data
     public Action(UUID a, int b, int c, long z){
         p = a;
         x = b;

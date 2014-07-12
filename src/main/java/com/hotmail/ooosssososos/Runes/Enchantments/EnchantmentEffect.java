@@ -4,4 +4,6 @@ import com.hotmail.ooosssososos.Runes.BasicEffect;
 
 public interface EnchantmentEffect extends BasicEffect {
 
+    //Lack of time D:
+
 }
