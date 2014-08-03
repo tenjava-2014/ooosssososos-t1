@@ -49,6 +49,12 @@ Usage
 
 The 3 Premade runes recipes are available in "<server Directory>/plugins/statusweapons/runes" (assuming you downloaded and placed it there during installation like u were supposed to)
 
+**Judge edit (don't include in docs points score):**
+
+![Crafting recipe](https://cdn.mediacru.sh/QXJ-wPoj9Bck.png)
+
+
+
 
 
 <!-- Hi, ooosssososos! This is the default README for every ten.java submission. -->
